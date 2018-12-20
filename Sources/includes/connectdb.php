@@ -2,7 +2,7 @@
 	$namehost = 'localhost';
 	$userhost = 'root';
 	$passhost = '';
-	$database = 'messenger';
+	$database = 'loginmember';
 
 	// Lệnh kết nối tới database
 	$cn = mysqli_connect($namehost, $userhost, $passhost, $database);
