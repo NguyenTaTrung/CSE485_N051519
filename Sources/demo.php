@@ -571,7 +571,7 @@
                     <div class="text-center m-t-none modal-heading">Đăng Ký Thành Viên</div>
                 </div>
                 <!-- Step 1 & 2 Registration Form -->
-                <form class="awe-check" autocomplete="off">
+                <form class="awe-check" autocomplete="off" id="formJoin" method="POST" onsubmit="return false;">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
@@ -595,15 +595,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" class="form-control email">
-                        <div class="help-text text-danger error__required-field animated fadeIn" hidden>Vui lòng nhập địa chỉ email.
-                            </div>
-                        <div class="help-text text-danger error__invalid-email animated fadeIn" hidden>Địa chỉ email không hợp lệ.
-                            </div>
-                        <div class="help-text text-danger error__disposable-email animated fadeIn" hidden>Vui lòng không sử dụng địa chỉ email không xác thực.
-                            </div>
-                        <div class="help-text text-danger error__duplicate-email animated fadeIn" hidden>Địa chỉ email trên đã được đăng ký. Xin vui lòng dùng địa chỉ email khác.</div>
+                        <label>Tên</label>
+                        <input type="text" name="taikoan" class="form-control" id="username">
                     </div>
                     <div class="form-group m-b-xs">
                         <label>Mật khẩu</label>
@@ -646,31 +639,21 @@
                 <button type="button" class="close" >
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <div class="alert alert-danger animated fadeIn no-break-out" hidden>
-                    <strong>
-                        Xin lỗi, có lỗi với thông tin bạn
-                        cung cấp. Vui lòng cuộn xuống để kiểm tra lỗi.
-                    </strong>
-                </div>
                 <div class="text-center m-t-none modal-heading">Đăng Nhập</div>
-                <p class="text-uppercase text-center use-email">Sử dụng tài khoản Recuiting Online</p>
+                <p class="text-uppercase text-center">Sử dụng tài khoản Recuiting Online</p>
+<?php
+	// Kết nối database, lấy dữ liệu chung
+	include('includes/general.php');
+?>
                 <!-- Sign In Form -->
-                <form class="awe-check" autocomplete="off">
-                                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control email">
-                        <div class="help-text text-danger error__required-field animated fadeIn" hidden>Vui lòng nhập địa chỉ email
-                            </div>
-                        <div class="help-text text-danger error__invalid-email animated fadeIn" hidden>Email không hợp lệ
-                            </div>
-                        <div class="help-text text-danger error__not-exist-email animated fadeIn" hidden>Email không tồn tại
-                            </div>
-                        <div class="help-text text-danger error__disposable-email animated fadeIn" hidden>Vui lòng dùng email thật của bạn
-                            </div>
+                <form class="awe-check" autocomplete="off" id="formJoin" method="POST" onsubmit="return false;">
+                    <div class="form-group">
+                        <label>Tên</label>
+                        <input type="text" class="form-control" id="username">
                     </div>
                     <div class="form-group m-b-xs">
                         <label>Mật khẩu</label>
-                        <input type="password" class="form-control password">
+                        <input type="password" class="form-control password" id="password">
                         <div class="help-text text-danger error__required-field animated fadeIn" hidden>Vui lòng nhập mật khẩu
                             </div>
                         <div class="help-text text-danger error__incorrect-password animated fadeIn" hidden>Sai mật khẩu
@@ -681,7 +664,8 @@
                         <div class="col-md-12 col-xs-12 text-right"><a class="inline m-t-sm forgot-password clickable" onclick="event.preventDefault(); globalForgotPasswordModal.showModal();">Quên mật khẩu?</a>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-sign-in full-width btn-lg clickable" onclick="event.preventDefault(); globalLogInModal.handleLogin();">Đăng nhập</button>
+                    <button type="submit" class="btn btn-submit btn-primary btn-sign-in full-width btn-lg clickable" onclick="event.preventDefault(); globalLogInModal.handleLogin();">Đăng nhập</button>
+                    <div class="alert danger"></div>
                 </form>
                 <!--/ Sign In Form -->
                 <hr class="hidden-xs"/>
@@ -769,6 +753,7 @@
 		}
 	}
 </script>
+<script type="text/javascript" src="js/join.js"></script>
 <script type="text/javascript" src="js/ui.js"></script>
 <script type="text/javascript" src="js/globalOnBoardingModals.js"></script>
 </body>
