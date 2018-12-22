@@ -25,7 +25,7 @@
 		// Nếu tồn tại username thì thực thi đăng nhập
 		if (mysqli_num_rows($query_check_exist_user))
 		{
-			$password = md5($password); // Mã hoá password sang MD5
+			//$password = md5($password); // Mã hoá password sang MD5
 			// Kiểm tra thông tin đăng nhập
 			$query_check_login = mysqli_query($cn, "SELECT * FROM users WHERE username = '$username' AND password = '$password'");
 			// Nếu thông tin đăng nhập đúng
@@ -33,7 +33,7 @@
 			{
 				echo $show_alert.$success_alert.'Đăng nhập thành công.'; // Thông báo
 				$_SESSION['username'] = $username; // Lưu session giá trị username
-				echo '<script>window.location.reload();</script>'; // Tải lại trang
+				echo '<script></script>';
 			}
 			// Ngược lại
 			else
