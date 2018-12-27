@@ -32,13 +32,13 @@
 			if (mysqli_num_rows($query_check_login))
 			{
 				echo $show_alert.$success_alert.'Đăng nhập thành công.'; // Thông báo
-				$_SESSION['username'] = $username; // Lưu session giá trị username
-				echo '<script></script>';
+				//echo '<script>alert("");</script>';
+			}else{
+				echo $show_alert.'Tài khoản hoặc mật khẩu không chính xác.';
 			}
-			// Ngược lại
-			else
-			{
-				echo $show_alert.'Tên đăng nhập hoặc mật khẩu không chính xác.'; // Thông báo
-			}
-        }
-    }
+		}else
+		{
+			echo $show_alert.'Tài khoản không tồn tại.'; // Thông báo
+		}
+	}
+?>

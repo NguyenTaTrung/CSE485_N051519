@@ -18,7 +18,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <a class="navbar-brand hidden-xs" href="">
-                            <img class="" src="images/img_tdo.png" alt="" title="" height="60px">
+                            <img class="" src="images/img_tdo.png" alt="" title="" height="57px">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -36,10 +36,10 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a class="clickable" rel="nofollow" onclick="globalLogInModal.showModal();">Đăng Nhập</a>
+                                <a class="clickable" id="dangnhap" rel="nofollow" onclick="globalLogInModal.showModal();">Đăng Nhập</a>
                             </li>
                             <li>
-                                <a class="clickable" rel="nofollow" onclick="globalRegistrationModal.showModal();">Đăng Ký</a>
+                                <a class="clickable" id="dangky" rel="nofollow" onclick="globalRegistrationModal.showModal();">Đăng Ký</a>
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -149,76 +149,17 @@
                                         <select data-search-input-placeholder="Tìm kiếm ngành nghề" data-placeholder="All categories" class="select-category"
                                                 id="cateListMainSearch" name="industry[]">
 <option value="-1">Tất cả ngành nghề</option>
-<option value='83'>An to&agrave;n lao động</option>
-<option value='78'>B&aacute;c sĩ</option>
-<option value='33'>B&aacute;n h&agrave;ng</option>
-<option value='34'>B&aacute;n h&agrave;ng kỹ thuật</option>
-<option value='32'>B&aacute;n lẻ/B&aacute;n sỉ</option>
-<option value='24'>Bảo hiểm</option>
-<option value='84'>Bảo tr&igrave;/Sửa chữa</option>
+<option value='78'>Bác sĩ</option>
 <option value='30'>Bất động sản</option>
-<option value='47'>Bi&ecirc;n phi&ecirc;n dịch</option>
-<option value='17'>Cấp quản l&yacute; điều h&agrave;nh</option>
-<option value='56'>Chứng kho&aacute;n</option>
-<option value='65'>Cơ kh&iacute;</option>
-<option value='66'>C&ocirc;ng nghệ cao</option>
-<option value='28'>Dầu kh&iacute;</option>
-<option value='52'>Dệt may/Da gi&agrave;y</option>
-<option value='11'>Dịch vụ kh&aacute;ch h&agrave;ng</option>
-<option value='6'>Dược Phẩm/C&ocirc;ng nghệ sinh học</option>
-<option value='80'>Dược sĩ</option>
-<option value='12'>Gi&aacute;o dục/Đ&agrave;o tạo</option>
-<option value='62'>H&agrave;ng cao cấp</option>
-<option value='75'>H&agrave;ng gia dụng</option>
-<option value='82'>H&agrave;ng hải</option>
-<option value='37'>H&agrave;ng kh&ocirc;ng/Du lịch</option>
-<option value='74'>H&agrave;ng ti&ecirc;u d&ugrave;ng</option>
-<option value='2'>H&agrave;nh ch&aacute;nh/Thư k&yacute;</option>
-<option value='43'>H&oacute;a học/H&oacute;a sinh</option>
-<option value='69'>Hoạch định/Dự &aacute;n</option>
-<option value='72'>In ấn/ Xuất bản</option>
-<option value='57'>Internet/Online Media</option>
+<option value='47'>Biên phiên dịch</option>
+<option value='17'>Cấp quản lý  điều hành</option>
+<option value='56'>Chứng khoán</option>
+<option value='66'>Công nghệ cao</option>
+<option value='2'>Thư ký</option>
 <option value='35'>IT - Phần mềm</option>
 <option value='55'>IT-Phần cứng/Mạng</option>
-<option value='1'>Kế to&aacute;n</option>
-<option value='53'>Kho vận</option>
-<option value='58'>Kiểm to&aacute;n</option>
-<option value='5'>Kiến tr&uacute;c/Thiết kế nội thất </option>
-<option value='27'>Marketing</option>
-<option value='15'>Mới tốt nghiệp</option>
-<option value='16'>M&ocirc;i trường/Xử l&yacute; chất thải</option>
-<option value='10'>Mỹ Thuật/Nghệ Thuật/Thiết Kế</option>
-<option value='42'>Ng&acirc;n h&agrave;ng</option>
-<option value='18'>Người nước ngo&agrave;i/Việt Kiều</option>
-<option value='73'>Nh&agrave; h&agrave;ng/Kh&aacute;ch sạn</option>
-<option value='23'>Nh&acirc;n sự</option>
-<option value='4'>N&ocirc;ng nghiệp/L&acirc;m nghiệp</option>
-<option value='71'>Overseas Jobs</option>
-<option value='25'>Ph&aacute;p l&yacute;</option>
-<option value='21'>Phi ch&iacute;nh phủ/Phi lợi nhuận</option>
-<option value='70'>QA/QC</option>
-<option value='3'>Quảng c&aacute;o/Khuyến m&atilde;i/Đối ngoại</option>
-<option value='68'>Sản phẩm c&ocirc;ng nghiệp</option>
-<option value='26'>Sản Xuất</option>
-<option value='59'>T&agrave;i ch&iacute;nh/Đầu tư</option>
-<option value='63'>Thời trang</option>
-<option value='51'>Thời vụ/Hợp đồng ngắn hạn</option>
-<option value='49'>Thu Mua/Vật Tư/Cung Vận</option>
-<option value='54'>Thực phẩm &amp; Đồ uống</option>
-<option value='81'>Tr&igrave;nh dược vi&ecirc;n</option>
-<option value='48'>Truyền h&igrave;nh/Truyền th&ocirc;ng/B&aacute;o ch&iacute;</option>
-<option value='8'>Tư vấn</option>
-<option value='67'>Tự động h&oacute;a/&Ocirc; t&ocirc;</option>
-<option value='36'>Vận chuyển/Giao nhận</option>
-<option value='41'>Viễn Th&ocirc;ng</option>
-<option value='7'>X&acirc;y dựng</option>
-<option value='19'>Xuất nhập khẩu</option>
-<option value='79'>Y sĩ/Hộ l&yacute;</option>
-<option value='22'>Y tế/Chăm s&oacute;c sức khỏe</option>
-<option value='77'>Địa chất/Kho&aacute;ng sản</option>
-<option value='76'>Điện lạnh/Nhiệt lạnh</option>
+<option value='7'>Xây dựng</option>
 <option value='64'>Điện/Điện tử</option>
-<option value='39'>Kh&aacute;c</option>
                                         </select>
                                     </div>
                                 </div>
@@ -227,76 +168,15 @@
                                         <select class="select-location" data-search-input-placeholder="Tìm kiếm địa điểm" id="locationMainSearch"
                                                 name="location[]"
                                                 data-placeholder="Select location">
-                                            <option value="-1">Tất cả địa điểm</option>
-                                            <option value='29'>Hồ Ch&iacute; Minh</option>
-<option value='24'>H&agrave; Nội</option>
-<option value='71'>ĐBSCL</option>
-<option value='2'>An Giang</option>
-<option value='3'>B&agrave; Rịa - Vũng T&agrave;u</option>
-<option value='4'>Bắc Kạn</option>
-<option value='5'>Bắc Giang</option>
-<option value='6'>Bạc Li&ecirc;u</option>
-<option value='7'>Bắc Ninh</option>
-<option value='8'>Bến Tre</option>
-<option value='9'>Bi&ecirc;n H&ograve;a</option>
-<option value='10'>B&igrave;nh Định</option>
-<option value='11'>B&igrave;nh Dương</option>
-<option value='12'>B&igrave;nh Phước</option>
-<option value='13'>B&igrave;nh Thuận</option>
-<option value='14'>C&agrave; Mau</option>
-<option value='15'>Cần Thơ</option>
-<option value='16'>Cao Bằng</option>
-<option value='17'>Đ&agrave; Nẵng</option>
-<option value='18'>Đắk Lắk</option>
-<option value='69'>Điện Bi&ecirc;n</option>
-<option value='19'>Đồng Nai</option>
-<option value='20'>Đồng Th&aacute;p</option>
-<option value='21'>Gia Lai</option>
-<option value='22'>H&agrave; Giang</option>
-<option value='23'>H&agrave; Nam</option>
-<option value='25'>H&agrave; T&acirc;y</option>
-<option value='26'>H&agrave; Tĩnh</option>
-<option value='27'>Hải Dương</option>
-<option value='28'>Hải Ph&ograve;ng</option>
-<option value='30'>H&ograve;a B&igrave;nh</option>
-<option value='31'>Huế</option>
-<option value='32'>Hưng Y&ecirc;n</option>
-<option value='33'>Kh&aacute;nh H&ograve;a</option>
-<option value='34'>Kon Tum</option>
-<option value='35'>Lai Ch&acirc;u</option>
-<option value='36'>L&acirc;m Đồng</option>
-<option value='37'>Lạng Sơn</option>
-<option value='38'>L&agrave;o Cai</option>
-<option value='40'>Nam Định</option>
-<option value='41'>Nghệ An</option>
-<option value='42'>Ninh B&igrave;nh</option>
-<option value='43'>Ninh Thuận</option>
-<option value='44'>Ph&uacute; Thọ</option>
-<option value='45'>Ph&uacute; Y&ecirc;n</option>
-<option value='46'>Quảng B&igrave;nh</option>
-<option value='47'>Quảng Nam</option>
-<option value='48'>Quảng Ng&atilde;i</option>
-<option value='49'>Quảng Ninh</option>
-<option value='50'>Quảng Trị</option>
-<option value='51'>S&oacute;c Trăng</option>
-<option value='52'>Sơn La</option>
-<option value='53'>T&acirc;y Ninh</option>
-<option value='54'>Th&aacute;i B&igrave;nh</option>
-<option value='55'>Th&aacute;i Nguy&ecirc;n</option>
-<option value='56'>Thanh H&oacute;a</option>
-<option value='57'>Thừa Thi&ecirc;n-Huế</option>
-<option value='58'>Tiền Giang</option>
-<option value='59'>Tr&agrave; Vinh</option>
-<option value='60'>Tuy&ecirc;n Quang</option>
-<option value='61'>Ki&ecirc;n Giang</option>
-<option value='62'>Vĩnh Long</option>
-<option value='63'>Vĩnh Ph&uacute;c</option>
-<option value='65'>Y&ecirc;n B&aacute;i</option>
-<option value='66'>Kh&aacute;c</option>
-<option value='70'>Quốc tế</option>
-<option value='72'>Hậu Giang</option>
-<option value='73'>Đắk N&ocirc;ng</option>
-<option value='39'>Long An</option>
+<option value="-1">Tất cả địa điểm</option>
+<option value='29'>Hồ Chí Minh</option>
+<option value='24'>Hà Nội</option>
+<option value='31'>Đà Nẵng</option>
+<option value='32'>Hưng Yên</option>
+<option value='42'>Ninh Bình</option>
+<option value='43'>Sài Gòn</option>
+<option value='44'>Phú Thọ</option>
+<option value='56'>Thanh Hóa</option>
                                         </select>
                                     </div>
                                 </div>
@@ -571,12 +451,16 @@
                     <div class="text-center m-t-none modal-heading">Đăng Ký Thành Viên</div>
                 </div>
                 <!-- Step 1 & 2 Registration Form -->
-                <form class="awe-check" autocomplete="off" id="formJoin" method="POST" onsubmit="return false;">
+<?php
+	// Kết nối database, lấy dữ liệu chung
+	include('includes/general.php');
+?>
+                <form class="awe-check" autocomplete="off" id="formJoin1" method="POST" onsubmit="return false;">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Tên</label>
-                                <input name="firstName" type="text" class="form-control first-name">
+                                <input name="firstName" type="text" class="form-control first-name" id="firstName">
                                 <div class="help-text text-danger error__required-field animated fadeIn" hidden>Vui lòng nhập tên.
                                     </div>
                                 <div class="help-text text-danger error__firstName_invalid-field animated fadeIn" hidden>Tên không hợp lệ.
@@ -586,7 +470,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Họ</label>
-                                <input name="lastName" type="text" class="form-control last-name">
+                                <input name="lastName" type="text" class="form-control last-name" id="lastName">
                                 <div class="help-text text-danger error__required-field animated fadeIn" hidden>Vui lòng nhập họ.
                                     </div>
                                 <div class="help-text text-danger error__lastName_invalid-field animated fadeIn" hidden>Họ không hợp lệ.
@@ -595,12 +479,12 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Tên</label>
-                        <input type="text" name="taikoan" class="form-control" id="username">
+                        <label>Tài khoản</label>
+                        <input type="text" name="Ten" class="form-control" id="username1">
                     </div>
                     <div class="form-group m-b-xs">
                         <label>Mật khẩu</label>
-                        <input type="password" name="password" class="form-control password">
+                        <input type="password" name="password" class="form-control password" id="password1">
                         <small class="help-text text-gray password-hint">Mật khẩu từ 6 đến 50 ký tự, ít nhất 1 ký tự viết hoa và 1 chữ số.
                         </small>
                         <div class="help-text text-danger error__required-field animated fadeIn" hidden>Vui lòng nhập mật khẩu.
@@ -612,7 +496,8 @@
                     <div class="form-group"><span
                                 class="help-text text-danger error__csrf_token_invalid-field animated fadeIn" hidden>Csrf token không hợp lệ
                         </span></div>
-                    <button type="submit" class="btn btn-primary btn-register full-width btn-lg "><i class="fa fa-lg fa-pulse fa-spinner" style="display: none"></i><span>Đăng ký</span></button>
+                    <button type="submit" class="btn btn-regester btn-primary btn-register full-width btn-lg "><i class="fa fa-lg fa-pulse fa-spinner" style="display: none"></i><span>Đăng ký</span></button>
+                    <div class="alert danger" style="text-align: center; color: red;"></div>
                 </form>
                 <p class="text-center text-light text-gray-light disclaimer animated fadeIn">
                     Nhấp chọn "Đăng ký", tôi đã đọc và đồng ý với các
@@ -632,7 +517,7 @@
 </div>
 <!--/ Global: REGISTRATION MODAL -->
 <!-- Global: SIGN IN MODAL -->
-<div class="modal fade global__sign-in-modal" data-current-url="" tabindex="-1" role="dialog">
+<div class="modal fade global__sign-in-modal" id="hide" data-current-url="" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
@@ -641,14 +526,10 @@
                 </button>
                 <div class="text-center m-t-none modal-heading">Đăng Nhập</div>
                 <p class="text-uppercase text-center">Sử dụng tài khoản Recuiting Online</p>
-<?php
-	// Kết nối database, lấy dữ liệu chung
-	include('includes/general.php');
-?>
                 <!-- Sign In Form -->
                 <form class="awe-check" autocomplete="off" id="formJoin" method="POST" onsubmit="return false;">
                     <div class="form-group">
-                        <label>Tên</label>
+                        <label>Tài khoản</label>
                         <input type="text" class="form-control" id="username">
                     </div>
                     <div class="form-group m-b-xs">
@@ -659,35 +540,14 @@
                         <div class="help-text text-danger error__incorrect-password animated fadeIn" hidden>Sai mật khẩu
                             </div>
                         <div class="help-text text-danger error__invalid-password animated fadeIn" hidden></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-xs-12 text-right"><a class="inline m-t-sm forgot-password clickable" onclick="event.preventDefault(); globalForgotPasswordModal.showModal();">Quên mật khẩu?</a>
-                        </div>
-                    </div>
+                    </div><br>
                     <button type="submit" class="btn btn-submit btn-primary btn-sign-in full-width btn-lg clickable" onclick="event.preventDefault(); globalLogInModal.handleLogin();">Đăng nhập</button>
-                    <div class="alert danger"></div>
+                    <div class="alert danger" style="text-align: center; color: red;"></div>
                 </form>
                 <!--/ Sign In Form -->
                 <hr class="hidden-xs"/>
                 <p class="text-center m-b-none register clickable">Chưa có tài khoản? <a href="#" onclick="event.preventDefault(); globalRegistrationModal.showModal();"><strong>Đăng ký!</strong></a>
                 </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade global__matched-jobs-modal" data-backdrop="static" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="customEvent('OnBoarding', 'Close', 'Step4');">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="text-center modal-heading">Việc làm phù hợp
-                    <br class="visible-xs">
-                    với hồ sơ của bạn
-                </div>
-                <div id="recommendation-jobs-modal"></div>
             </div>
         </div>
     </div>
