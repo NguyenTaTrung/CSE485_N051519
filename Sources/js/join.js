@@ -20,9 +20,40 @@ function Join() {
 	});
 }
 
+
+function Reges(){
+	$firstName = $('#firstName').val();
+	$lastName = $('#lastName').val();
+	$username1 = $('#username1').val();
+	$password1 = $('#password1').val();
+
+
+	$.ajax({
+		url : 'regester.php', // Đường dẫn file xử lý
+		type : 'POST', // Phương thức
+		// Các dữ liệu
+		data : {
+			firstName : $firstName,
+			lastName : $lastName,
+			username1 : $username1,
+			password1 : $password1
+		// Thực thi khi gửi dữ liệu thành công
+		}, success : function(result) {
+			$('#formJoin1 .btn-regester').html('Đăng ký');
+			$('#formJoin1 .alert').html(result); // Thông báo
+		}
+	});
+}
+
 // Bắt sự kiện click vào nút bắt đầu của form
 $('#formJoin .btn-submit').click(function() {
 	$(this).html('Đang tải ...');
 	// Thực thi gửi dữ liệu
 	Join();
+});
+
+$('#formJoin1 .btn-regester').click(function() {
+	$(this).html('Đang tải ...');
+	// Thực thi gửi dữ liệu
+	Reges();
 });
