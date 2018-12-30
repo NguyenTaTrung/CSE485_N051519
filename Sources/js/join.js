@@ -57,3 +57,45 @@ $('#formJoin1 .btn-regester').click(function() {
 	// Thực thi gửi dữ liệu
 	Reges();
 });
+
+// $(document).on('click', '#tk', function(){
+	
+// 	var nganh = $('#cateListMainSearch').val();
+//      var diadiem = $('#locationMainSearch').val();
+// 	$.ajax({
+// 		url:'timkiemcongviec.php',
+// 		method : 'POST',
+// 		data:{
+// 			nganh : nganh,
+// 			diadiem:diadiem
+// 		},
+// 		success:function(data){
+// 			$('#abc').html(data);
+// 		},
+// 		error : function(){
+// 			alert('loi');
+// 		}
+// 	})
+
+// });
+
+
+$("#tk").click(function(){
+	var nganh = $('#cateListMainSearch').val();
+     var diadiem = $('#locationMainSearch').val();
+	$.ajax({
+		url:'timkiemcongviec.php',
+		method : 'POST',
+		data:{
+			nganh : nganh,
+			diadiem : diadiem
+		},
+		success:function(data){
+			$('#conten').html(data);
+		},
+		error : function(){
+			alert('loi');
+		}
+	})
+	
+})
