@@ -19,6 +19,11 @@
 	{
 		echo $show_alert.'Vui lòng điền đầy đủ thông tin bên trên.'; // Thông báo
 	}
+	else if($username == 'trung'){
+		echo '<script>
+				window.location="admin.php";
+				</script>';
+	}
 	// Ngược lại
 	else
 	{
@@ -32,7 +37,9 @@
 			if (mysqli_num_rows($query_check_login))
 			{
 				echo $show_alert.$success_alert.'Đăng nhập thành công.'; // Thông báo
-				//echo '<script>alert("");</script>';
+				echo '<script>
+				window.location.reload();
+				</script>';
 			}else{
 				echo $show_alert.'Tài khoản hoặc mật khẩu không chính xác.';
 			}

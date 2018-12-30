@@ -25,10 +25,10 @@
                     <div class="hidden-xs">
                         <ul class="nav navbar-nav navbar-left">
                             <li>
-                                <a href="">Tất Cả Việc Làm</a>
+                                <a href="">Việc Làm</a>
                             </li>
                             <li>
-                                <a href="">Công Ty</a>
+                                <a href="">Nhà tuyển dụng</a>
                             </li>
                             <li>
                                 <a target="_blank" href="">Tư Vấn</a>
@@ -61,12 +61,12 @@
                     <li class="secondary-level-menu">
                         <ul>
                             <li>
-                                <a class="clickable" rel="nofollow" onclick="globalLogInModal.showModal();">
+                                <a class="clickable" id="dangnhap" rel="nofollow" onclick="globalLogInModal.showModal();">
                                     <span>Đăng Nhập</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="clickable" rel="nofollow" onclick="globalRegistrationModal.showModal();">
+                                <a class="clickable" id="dangky" rel="nofollow" onclick="globalRegistrationModal.showModal();">
                                     <span>Đăng Ký</span></a>
                             </li>
                         </ul>
@@ -133,33 +133,16 @@
                 <div class="tab-content">
                     <!-- Jobs -->
                     <div role="tabpanel" class="tab-pane tab-job active" id="home">
-                        <form class="form-inline form-adjacent form-checkbox-advanced" name="search" onSubmit="return submitBlockSearchForm()" id="frm_block_quick_search"
+                        <form class="form-inline form-adjacent form-checkbox-advanced" method="POST" name="search" onSubmit="return submitBlockSearchForm()" id="frm_block_quick_search"
                               method="get">
                             <div class="search-group">
-                                <div class="form-group col-sm-4 keyword-search no-padding">
-                                    <i hidden class="fa fa-long-arrow-left clickable keyword-search__close"></i>
-                                    <i class="fa fa-close clear-keyword clickable absolute"></i>
-                                    <div class="border-text-box">
-                                        <input type="text" name="keyword" id="keywordMainSearch" value=""
-                                               class="form-control job-typeahead col-xs-8 col-sm-12 col-md-8" placeholder="Việc làm, công ty">
-                                    </div>
-                                </div>
                                 <div class="form-group col-sm-3 category-search no-padding">
                                     <div class="border-text-box">
                                         <select data-search-input-placeholder="Tìm kiếm ngành nghề" data-placeholder="All categories" class="select-category"
                                                 id="cateListMainSearch" name="industry[]">
 <option value="-1">Tất cả ngành nghề</option>
-<option value='78'>Bác sĩ</option>
-<option value='30'>Bất động sản</option>
-<option value='47'>Biên phiên dịch</option>
-<option value='17'>Cấp quản lý  điều hành</option>
-<option value='56'>Chứng khoán</option>
-<option value='66'>Công nghệ cao</option>
-<option value='2'>Thư ký</option>
-<option value='35'>IT - Phần mềm</option>
-<option value='55'>IT-Phần cứng/Mạng</option>
-<option value='7'>Xây dựng</option>
-<option value='64'>Điện/Điện tử</option>
+<option >Bác Sỹ</option>
+<option >Kế Toán</option>
                                         </select>
                                     </div>
                                 </div>
@@ -169,19 +152,14 @@
                                                 name="location[]"
                                                 data-placeholder="Select location">
 <option value="-1">Tất cả địa điểm</option>
-<option value='29'>Hồ Chí Minh</option>
-<option value='24'>Hà Nội</option>
-<option value='31'>Đà Nẵng</option>
-<option value='32'>Hưng Yên</option>
-<option value='42'>Ninh Bình</option>
-<option value='43'>Sài Gòn</option>
-<option value='44'>Phú Thọ</option>
-<option value='56'>Thanh Hóa</option>
+<option >Hồ Chí Minh</option>
+<option >Hà Nội</option>
+
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group col-sm-2 text-center no-padding">
-                                    <button type="submit" class="btn btn-primary btn-search-all">
+                                    <button type="button" class="btn btn-primary btn-search-all" id="tk">
                                         Tìm Việc
                                     </button>
                                 </div>
@@ -191,6 +169,7 @@
                     <!--/ Jobs -->
                 </div>
             </div>
+            <div id="conten"></div>
         </div>
     </div>
 </div>
@@ -209,7 +188,7 @@
                             <img src="images/channel-icon-tmj.png"/>
                             <div class="channel-label">Việc Làm Cấp Quản Lý</div>
                             <div class="number-jobs">2165 Việc Làm</div>
-                            <a target="_blank" href="" class="btn btn-primary">Xem</a>
+                            <a target="_blank" href="capquanly.php" class="btn btn-primary">Xem</a>
                         </div>
                     </div>
                                                     <div class="col-sm-4 channel">
@@ -219,7 +198,7 @@
                             <img src="images/channel-icon-it.png"/>
                             <div class="channel-label">Việc Làm Ngành IT</div>
                             <div class="number-jobs">1360 Công Việc</div>
-                            <a target="_blank" href="" class="btn btn-primary">Xem</a>
+                            <a target="_blank" href="it.php" class="btn btn-primary">Xem</a>
                         </div>
                     </div>
                                                     <div class="col-sm-4 channel">
@@ -229,7 +208,7 @@
                             <img src="images/channel-icon-intern.png"/>
                             <div class="channel-label">Mới Tốt Nghiệp</div>
                             <div class="number-jobs">692 Việc Làm</div>
-                            <a target="_blank" href="" class="btn btn-primary">Xem</a>
+                            <a target="_blank" href="ratruong.php" class="btn btn-primary">Xem</a>
                         </div>
                     </div>
                             </div>
@@ -540,7 +519,11 @@
                         <div class="help-text text-danger error__incorrect-password animated fadeIn" hidden>Sai mật khẩu
                             </div>
                         <div class="help-text text-danger error__invalid-password animated fadeIn" hidden></div>
-                    </div><br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12 text-right"><a class="inline m-t-sm forgot-password clickable" onclick="event.preventDefault(); globalForgotPasswordModal.showModal();">Quên mật khẩu?</a>
+                        </div>
+                    </div>
                     <button type="submit" class="btn btn-submit btn-primary btn-sign-in full-width btn-lg clickable" onclick="event.preventDefault(); globalLogInModal.handleLogin();">Đăng nhập</button>
                     <div class="alert danger" style="text-align: center; color: red;"></div>
                 </form>
@@ -589,6 +572,7 @@
             </div>
         </div>
     </footer>
+    <div id="abc">sssss</div>
 <script type="text/javascript">
 	var system_version = 'zr1544699339';
 		language = 1,

@@ -50,11 +50,11 @@ $query_check_exist_user = mysqli_query($cn, "SELECT * FROM users WHERE username 
 				'$password1',
 				'$date_current' 
 			)");
-		echo $show_alert.$success_alert.'Đăng ký tài khoản thành công.'; // Thông báo(không cần cũng được)
+		echo $show_alert.$success_alert.'Đăng ký tài khoản thành công.'; // Thông báo
 		echo '<script>
-		alert("Đăng ký tài khoản thành công");
+		alert("Đăng ký tài khoản thành công");
 		window.location.reload();
-		</script>';
+		</script>'; // Tải lại trang
         }
     }
 }

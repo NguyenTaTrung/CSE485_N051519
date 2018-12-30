@@ -12,4 +12,7 @@
 	{
 		echo 'Could not connect to database.';
 	}
+	else{
+		mysqli_set_charset($cn,'utf8');
+	}
 ?>
