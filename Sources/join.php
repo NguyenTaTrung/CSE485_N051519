@@ -38,7 +38,7 @@
 			{
 				echo $show_alert.$success_alert.'Đăng nhập thành công.'; // Thông báo
 				echo '<script>
-				window.location.reload();
+                window.location.reload();
 				</script>';
 			}else{
 				echo $show_alert.'Tài khoản hoặc mật khẩu không chính xác.';

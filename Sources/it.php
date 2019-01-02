@@ -80,6 +80,15 @@
         <!-- End Splitter Menu -->
     
 <!--main-->
+<?php
+	// Kết nối database, lấy dữ liệu chung
+    include('includes/general.php');
+
+    $sql = "SELECT ct.TenCT,vl.TenVL,kv.TenKV,tt.Logo,tt.Luong,vl.TrangThai FROM khuvuc kv , congty ct, vieclam vl ,thongtin tt where tt.MaVL=vl.MaVL and vl.MaCT=ct.MaCT and ct.MaKV=kv.MaKV and vl.TrangThai='it'";
+    $kq=mysqli_query($cn,$sql);
+    $sl=mysqli_num_rows($kq);
+    
+?>
 <div class="page-white" style="padding-top: 25px;">
         <div class="container">
             
@@ -88,10 +97,47 @@
                     <div class="box_general">
                         <h2 class="text_ellipsis uppercase">
                             <i class="icons8-sack-of-dollar-2 yellow-box-icon"></i>
-                            <a href="javascript:void(0)" title="Việc làm lương cao" style="color: #fff"> VIỆC LÀM NGÀNH IT</a>
+                            <a href="javascript:void(0)" title="" style="color: #fff"> VIỆC LÀM NGÀNH IT</a>
                         </h2>
+
+                        
                         <div class="ctn-list-jobs">
                             <div class="item container-scroll">
+
+                            <div class="el2">
+                                    <section style="overflow: hidden">
+                                        
+                                        
+                                        <div class="job-over-item">
+                                            <div class="row job-item">
+                                                <div class="col-md-7 col-sm-6 col-job-title">
+                                                    <div class="row">
+                                                        <div class="col-xs-3">Logo
+                                                        </div>
+                                                        <div class="col-xs-9">
+                                                            <div class="title text_ellipsis">Việc Làm
+                                                            </div>
+                                                            <div class="company text_ellipsis">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 col-sm-6 col-job-info text-dark-gray">
+                                                    <div class="row">
+                                                        <div class="salary col-xs-6">
+                                                            <div class="">Lương</div>
+                                                        </div>
+                                                        <div title="" class="address col-xs-6">
+                                                        <div class="t">Khu vực</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                </div>
+                               <?php while($row=mysqli_fetch_array($kq)){ ?>
                                 <div class="el2">
                                     <section style="overflow: hidden">
                                         
@@ -101,34 +147,32 @@
                                                 <div class="col-md-7 col-sm-6 col-job-title">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <a href="job.php"
-                                                                title="UI/UX Designer" target="_blank">
-                                                                <img src="images/congty.jpg"
+                                                            <a href="job.php?loc=<?php echo $row['TenVL'] ?>"
+                                                                title="" target="_blank">
+                                                                <img src="images/<?php echo $row['Logo'] ?>"
                                                                     
-                                                                    alt="C&ocirc;ng ty cổ phần MISA - Trung t&acirc;m Ph&aacute;t triển phần mềm"
-                                                                    title="Thông tin công ty C&ocirc;ng ty cổ phần MISA - Trung t&acirc;m Ph&aacute;t triển phần mềm"
+                                                                    alt=""
+                                                                    title=""
                                                                     class="lazy img-responsive" style="width: 50px; height: auto;">
                                                             </a>
                                                         </div>
                                                         <div class="col-xs-9">
                                                             <div class="title text_ellipsis">
-                                                                <a href="job.php"
-                                                                    title="UI/UX Designer" target="_blank">
+                                                                <a href="job.php?loc=<?php echo $row['TenVL'] ?>"
+                                                                    title="" target="_blank">
                                                                     <span>
-                                                                        <strong data-toggle="tooltip" title="UI/UX Designer"
+                                                                        <strong data-toggle="tooltip" title=""
                                                                             data-placement="top" data-container="body"
-                                                                            style="font-weight: bold;">UI/UX Designer</strong>
+                                                                            style="font-weight: bold;"><?php echo $row['TenVL'] ?></strong><!--nganh nghe-->
                                                                     </span>
                                                                 </a>
                                                             </div>
                                                             <div class="company text_ellipsis">
-                                                                <a href="job.php"
-                                                                    target="_blank" title="C&ocirc;ng ty cổ phần MISA - Trung t&acirc;m Ph&aacute;t triển phần mềm"
+                                                                <a href="job.php?loc=<?php echo $row['TenVL'] ?>"
+                                                                    target="_blank" title=""
                                                                     class="text-silver">
-                                                                    <span data-toggle="tooltip" title="C&ocirc;ng ty cổ phần MISA - Trung t&acirc;m Ph&aacute;t triển phần mềm"
-                                                                        data-placement="top" data-container="body">C&ocirc;ng
-                                                                        ty cổ phần MISA - Trung t&acirc;m Ph&aacute;t
-                                                                        triển phần mềm</span>
+                                                                    <span data-toggle="tooltip" title=""
+                                                                        data-placement="top" data-container="body"></span><?php echo $row['TenCT'] ?><!--cong ty-->
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -137,11 +181,10 @@
                                                 <div class="col-md-5 col-sm-6 col-job-info text-dark-gray">
                                                     <div class="row">
                                                         <div class="salary col-xs-6">
-                                                            <i class="icons8-dollar-sign text-highlight"></i>15-25
-                                                            triệu
+                                                            <i class="icons8-dollar-sign text-highlight"></i><?php echo $row['Luong'] ?> Triệu<!--luong-->
                                                         </div>
-                                                        <div title="H&agrave; Nội" class="address col-xs-6">
-                                                            <i class="icons8-map-pin text-highlight"></i>H&agrave; Nội
+                                                        <div title="" class="address col-xs-6">
+                                                            <i class="icons8-map-pin text-highlight"></i><?php echo $row['TenKV'] ?><!--khu vực-->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -150,6 +193,11 @@
 
                                     </section>
                                 </div>
+                                <?php
+    }
+    ?>
+
+
                             </div>
                         </div>
                     </div>
@@ -157,6 +205,8 @@
             </div>
         </div>
     </div>
+
+    
 
 
     <div class="modal fade global__registration-modal" data-current-url="" tabindex="-1" role="dialog">

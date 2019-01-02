@@ -152,7 +152,7 @@
     </div>
     
     <div id="CongTy" class="tabcontent">
-      <img src="images/<?php echo $row['Logo']?>.jpg" alt="aaa">
+      <img src="images/<?php echo $row['Logo']?>" alt="aaa">
       <p></p> 
     </div>
 <?php

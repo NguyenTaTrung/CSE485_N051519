@@ -141,8 +141,9 @@
                                         <select data-search-input-placeholder="Tìm kiếm ngành nghề" data-placeholder="All categories" class="select-category"
                                                 id="cateListMainSearch" name="industry[]">
 <option value="-1">Tất cả ngành nghề</option>
-<option >Bác Sỹ</option>
+<option >Công nghệ thông tin</option>
 <option >Kế Toán</option>
+<option >Partime</option>
                                         </select>
                                     </div>
                                 </div>
@@ -380,13 +381,7 @@
                 </a>
             </div>             
                    
-            </div>
-        <div class="text-right">
-            <a href="#" class="btn-view-all">
-                Xem tất cả nhà tuyển dụng →
-            </a>
-        </div>
-    
+            </div>  
     </div>
 </section>
 
