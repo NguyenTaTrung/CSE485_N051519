@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="">
     <title>Tuyển dụng, tìm việc làm nhanh mới nhất  | Recuiting Online</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/demo3.css">
     <script type="text/javascript" src="js/plugins.js"></script>
 </head>
@@ -17,7 +18,7 @@
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <a class="navbar-brand hidden-xs" href="">
+                        <a class="navbar-brand hidden-xs" href="demo.php">
                             <img class="" src="images/img_tdo.png" alt="" title="" height="57px">
                         </a>
                     </div>
@@ -29,9 +30,6 @@
                             </li>
                             <li>
                                 <a href="">Nhà Tuyển Dụng</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="">Tư Vấn</a>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -139,21 +137,23 @@
     if(isset($_GET['loc'])){
         $id=$_GET['loc'];
 
-    $sql = "SELECT ct.TenCT,vl.TenVL,kv.TenKV,tt.MaTT,tt.Logo,tt.YeuCau,tt.SoLuongTuyen,tt.Luong,tt.NgayDang FROM khuvuc kv , congty ct, vieclam vl ,thongtin tt where tt.MaVL=vl.MaVL and vl.MaCT=ct.MaCT and ct.MaKV=kv.MaKV and vl.TenVL='$id'";
+    $sql = "SELECT ct.TenCT,ct.ThongTin,vl.TenVL,kv.TenKV,tt.MaTT,tt.Logo,tt.YeuCau,tt.SoLuongTuyen,tt.Luong,tt.NgayDang,tt.MoTa FROM khuvuc kv , congty ct, vieclam vl ,thongtin tt where tt.MaVL=vl.MaVL and vl.MaCT=ct.MaCT and ct.MaKV=kv.MaKV and vl.TenVL='$id'";
     $kq=mysqli_query($cn,$sql);
     $sl=mysqli_num_rows($kq);
     while($row=mysqli_fetch_array($kq)){
 ?>
     <div id="ThongTin" class="tabcontent">
       <h3><?php echo $row['TenVL'] ?></h3>
-      <p>Yêu cầu: <?php echo $row['YeuCau'] ?></p>
+      <b>Mô tả:</b><p><?php echo $row['MoTa'] ?></p>
+      <b>Yêu cầu:</b><p><?php echo $row['YeuCau'] ?></p>
+      <p>Khu vực: <?php echo $row['TenKV'] ?></p>
       <p>Lương: <?php echo $row['Luong'] ?> Triệu</P>
-      <p>Ngày Đăng Tuyển: <?php echo $row['NgayDang'] ?></p>
+      <p>Ngày Đăng Tuyển: <?php echo $row['NgayDang'] ?> Trước</p>
     </div>
     
-    <div id="CongTy" class="tabcontent">
-      <img src="images/<?php echo $row['Logo']?>" alt="aaa">
-      <p></p> 
+    <div id="CongTy" class="tabcontent"><br>
+      <img src="images/<?php echo $row['Logo']?>" alt="" width="200px" height="100px"><br><br>
+      <p><?php echo $row['ThongTin']?></p><br>
     </div>
 <?php
     }

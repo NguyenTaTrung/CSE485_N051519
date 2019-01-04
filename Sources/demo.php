@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="">
     <title>Tuyển dụng, tìm việc làm nhanh mới nhất  | Recuiting Online</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/demo3.css">
     <script type="text/javascript" src="js/plugins.js"></script>
 </head>
@@ -25,13 +26,10 @@
                     <div class="hidden-xs">
                         <ul class="nav navbar-nav navbar-left">
                             <li>
-                                <a href="">Việc Làm</a>
+                                <a href="#vieclam">Việc Làm</a>
                             </li>
                             <li>
-                                <a href="">Nhà tuyển dụng</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="">Tư Vấn</a>
+                                <a href="#nhatd">Nhà tuyển dụng</a>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -141,7 +139,7 @@
                                         <select data-search-input-placeholder="Tìm kiếm ngành nghề" data-placeholder="All categories" class="select-category"
                                                 id="cateListMainSearch" name="industry[]">
 <option value="-1">Tất cả ngành nghề</option>
-<option >Công nghệ thông tin</option>
+<option >Công nghệ thông tin</option>
 <option >Kế Toán</option>
 <option >Partime</option>
                                         </select>
@@ -217,7 +215,7 @@
     </section>
     <!--Top Jobs & Featured Employers-->
     <!-- Jobs You Will Love -->
-<section class="feature container home__jobs-you-will-love">
+<section class="feature container home__jobs-you-will-love" id="vieclam">
     <h1 class="text-center">Việc Làm Bạn Sẽ Thích</h1>
     <div class="tabs-container">
         <div class="tab-content">
@@ -341,42 +339,42 @@
     </div>
 </section>
 
-<section class="home__other-employers animated fadeIn">
+<section class="home__other-employers animated fadeIn" id="nhatd">
     <h1 class="text-center">Các Nhà Tuyển Dụng Hàng Đầu</h1>
     <div class="container">
         <div class="row logo-list">
             <div class="logo col-xs-4 col-md-2">
-                <a class="box flex-center-xy" href="" target="_blank">
+                <a class="box flex-center-xy" href="http://adcplastic.com/" target="_blank">
                     <img class="img-responsive" src="images/logo_102945.png" alt="Logo">
                 </a>
             </div>       
             
             <div class="logo col-xs-4 col-md-2">
-                <a class="box flex-center-xy" href="" target="_blank">
+                <a class="box flex-center-xy" href="http://sunnyworldpro.com/vi/" target="_blank">
                     <img class="img-responsive" src="images/5.Uniprime_104617.png" alt="Logo">
                 </a>
             </div>       
             
             <div class="logo col-xs-4 col-md-2">
-                <a class="box flex-center-xy" href="" target="_blank">
-                    <img class="img-responsive" src="images/88x43-Green_104721.jpg" alt="Logo">
+                <a class="box flex-center-xy" href="https://cybozu.vn/" target="_blank">
+                    <img class="img-responsive" src="images/cybozu.jpg" alt="Logo">
                 </a>
             </div>       
             
             <div class="logo col-xs-4 col-md-2">
-                <a class="box flex-center-xy" href="" target="_blank">
-                    <img class="img-responsive" src="images/FETOMEC_104604.jpg" alt="Logo">
+                <a class="box flex-center-xy" href="http://www.misa.com.vn/" target="_blank">
+                    <img class="img-responsive" src="images/congty.jpg" alt="Logo">
                 </a>
             </div>       
             
             <div class="logo col-xs-4 col-md-2">
-                <a class="box flex-center-xy" href="" target="_blank">
+                <a class="box flex-center-xy" href="http://vmgmedia.vn/recruitment" target="_blank">
                     <img class="img-responsive" src="images/logo_104713.png" alt="Logo">
                 </a>
             </div>       
             
             <div class="logo col-xs-4 col-md-2">
-                <a class="box flex-center-xy" href="" target="_blank">
+                <a class="box flex-center-xy" href="http://www.novaland.com.vn/" target="_blank">
                     <img class="img-responsive" src="images/88x43-Land_104664.jpg" alt="Logo">
                 </a>
             </div>             
@@ -567,7 +565,6 @@
             </div>
         </div>
     </footer>
-    <div id="abc">sssss</div>
 <script type="text/javascript">
 	var system_version = 'zr1544699339';
 		language = 1,

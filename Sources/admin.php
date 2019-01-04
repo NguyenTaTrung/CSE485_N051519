@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 * {box-sizing: border-box}
@@ -359,7 +360,6 @@ opacity: 1;
     <th>Họ</th>
     <th>Tài Khoản</th>
     <th>Mật Khẩu</th>
-    <th>Ngày Tạo</th>
     <th>Chức Năng</th>
   </tr>
   <?php while($row=mysqli_fetch_array($kq1)){ ?>
@@ -369,7 +369,6 @@ opacity: 1;
     <td><?php echo $row['lastName'] ?></td>
     <td><?php echo $row['username'] ?></td>
     <td><?php echo $row['password'] ?></td>
-    <td><?php echo $row['date_created'] ?></td>
     <td>
     <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Sửa</button>
     <button type="button" value="Xóa">Xóa</button>
@@ -383,11 +382,9 @@ opacity: 1;
 <!----------------------------------------Form thêm user------------------------------------------>
     <div id="id03" class="modall">
 
-        <form method="POST" id="formJoin" class="modall-contentt animatee">
+        <form method="POST" id="formthemuser" class="modall-contentt animatee">
 
             <div class="containerr">
-                <label><b>ID_user</b></label>
-                <input type="text" id="id">
 
                 <label><b>Tên</b></label>
                 <input type="text" id="ten">
@@ -401,9 +398,6 @@ opacity: 1;
                 <label><b>Mật khẩu</b></label>
                 <input type="text" id="mk">
 
-                <label><b>Ngày tạo</b></label>
-                <input type="text" id="date">
-
                 <button type="button" class="btnthemuser">Thêm</button>
             </div>
 
@@ -415,28 +409,25 @@ opacity: 1;
 
 <!----------------------------------------Form sửa user------------------------------------------>
 <div id="id04" class="modall">
-<form method="POST" id="formJoin" class="modall-contentt animatee">
+<form method="POST" id="formsuau" class="modall-contentt animatee">
 
     <div class="containerr">
         <label><b>ID_user</b></label>
-        <input type="text" id="id">
+        <input type="text" id="id1">
 
         <label><b>Tên</b></label>
-        <input type="text" id="ten">
+        <input type="text" id="ten1">
 
         <label><b>Họ</b></label>
-        <input type="text" id="ho">
+        <input type="text" id="ho1">
 
         <label><b>Tài khoản</b></label>
-        <input type="text" id="tk">
+        <input type="text" id="tk1">
 
         <label><b>Mật khẩu</b></label>
-        <input type="text" id="mk">
+        <input type="text" id="mk1">
 
-        <label><b>Ngày tạo</b></label>
-        <input type="text" id="date">
-
-        <button type="button" class="btnsuauser">Sửa</button>
+        <button type="button" class="btnsuau">Sửa</button>
     </div>
 
     <div class="containerr" style="background-color:#f1f1f1">
@@ -476,14 +467,14 @@ opacity: 1;
 <!----------------------------------------Form thêm Khu Vực------------------------------------------>
     <div id="id05" class="modall">
 
-        <form method="POST" id="formJoin" class="modall-contentt animatee">
+        <form method="POST" id="formthemkv" class="modall-contentt animatee">
 
             <div class="containerr">
                 <label><b>Mã KV</b></label>
                 <input type="text" id="makv">
 
                 <label><b>Tên KV</b></label>
-                <input type="text" id="tenkv">
+                <input type="text" id="tenkv1">
 
                 <button type="button" class="btnthemkv">Thêm</button>
             </div>
@@ -495,26 +486,22 @@ opacity: 1;
     </div>
 
 <!----------------------------------------Form sửa Khu Vực------------------------------------------>
-    <div id="id06" class="modall">
-
-<form method="POST" id="formJoin" class="modall-contentt animatee">
-
+<div id="id06" class="modall">
+<form method="POST" id="formsuakv" class="modall-contentt animatee">
     <div class="containerr">
             <label><b>Mã KV</b></label>
-            <input type="text" id="makv">
+            <input type="text" id="makv2" value="<?php echo $row['MaKV'] ?>">
 
             <label><b>Tên KV</b></label>
-            <input type="text" id="tenkv">
+            <input type="text" id="tenkv2" value="<?php echo $row['TenKV'] ?>">
 
         <button type="button" class="btnsuakv">Sửa</button>
     </div>
-
     <div class="containerr" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id06').style.display='none'" class="cancelbtn">Thoát</button>
     </div>
 </form>
 </div>
-
 
 
 
@@ -546,7 +533,7 @@ opacity: 1;
 <!----------------------------------------Form Thêm NN------------------------------------------>
 <div id="id07" class="modall">
 
-        <form method="POST" id="formJoin" class="modall-contentt animatee">
+        <form method="POST" id="formthemnn" class="modall-contentt animatee">
 
             <div class="containerr">
                 <label><b>Mã NN</b></label>
@@ -564,17 +551,17 @@ opacity: 1;
         </form>
     </div>
 
-<!----------------------------------------Form Sửa VL------------------------------------------>
+<!----------------------------------------Form Sửa NN------------------------------------------>
     <div id="id08" class="modall">
 
-        <form method="POST" id="formJoin" class="modall-contentt animatee">
+        <form method="POST" id="formsuann" class="modall-contentt animatee">
 
             <div class="containerr">
                 <label><b>Mã NN</b></label>
-                <input type="text" id="mann">
+                <input type="text" id="mann2">
 
                 <label><b>Tên NN</b></label>
-                <input type="text" id="tennn">
+                <input type="text" id="tennn2">
 
                 <button type="button" class="btnsuann">Sửa</button>
             </div>
@@ -608,7 +595,7 @@ opacity: 1;
     <td><?php echo $row['ThongTin'] ?></td>
     <td>
     <button onclick="document.getElementById('id10').style.display='block'" style="width:auto;">Sửa</button>
-    <button type="button" value="Xóa">Xóa</button>
+    <button type="button" class="xoact1"  id="<?php echo $row['MaCT'] ?>">Xóa</button>
     </td>
   </tr>
   <?php
@@ -619,20 +606,18 @@ opacity: 1;
 <!----------------------------------------Form thêm CT------------------------------------------>
     <div id="id09" class="modall">
 
-        <form method="POST" id="formJoin" class="modall-contentt animatee">
+        <form method="POST" id="formthemct" class="modall-contentt animatee">
 
             <div class="containerr">
-                <label><b>Mã CT</b></label>
-                <input type="text" id="mact">
 
                 <label><b>Tên CT</b></label>
-                <input type="text" id="tenct">
+                <input type="text" id="tenct1">
 
                 <label><b>Mã KV</b></label>
-                <input type="text" id="makv">
+                <input type="text" id="makv1">
 
                 <label><b>Thông Tin</b></label>
-                <input type="text" id="tt">
+                <input type="text" id="tt1">
 
                 <button type="button" class="btnthemct">Thêm</button>
             </div>
@@ -645,20 +630,20 @@ opacity: 1;
 
 <!----------------------------------------Form sửa CT------------------------------------------>
 <div id="id10" class="modall">
-<form method="POST" id="formJoin" class="modall-contentt animatee">
+<form method="POST" id="formsuact" class="modall-contentt animatee">
 
     <div class="containerr">
-            <label><b>Mã CT</b></label>
-            <input type="text" id="mact">
+            <label><b>Mã CT</b></label>
+            <input type="text" id="mact3">
 
             <label><b>Tên CT</b></label>
-            <input type="text" id="tenct">
+            <input type="text" id="tenct3">
 
             <label><b>Mã KV</b></label>
-            <input type="text" id="makv">
+            <input type="text" id="makv3">
 
             <label><b>Thông Tin</b></label>
-            <input type="text" id="tt">
+            <input type="text" id="tt3">
 
         <button type="button" class="btnsuact">Sửa</button>
     </div>
@@ -706,23 +691,21 @@ opacity: 1;
 <!----------------------------------------Form thêm VL------------------------------------------>
     <div id="id11" class="modall">
 
-        <form method="POST" id="formJoin" class="modall-contentt animatee">
+        <form method="POST" id="formthemvieclam" class="modall-contentt animatee">
 
             <div class="containerr">
-                <label><b>Mã VL</b></label>
-                <input type="text" id="mavl">
 
                 <label><b>Tên VL</b></label>
-                <input type="text" id="tenvl">
+                <input type="text" id="tenvl6">
 
                 <label><b>Mã CT</b></label>
-                <input type="text" id="mact">
+                <input type="text" id="mact6">
 
                 <label><b>Mã NN</b></label>
-                <input type="text" id="mann">
+                <input type="text" id="mann6">
 
                 <label><b>Trạng Thái</b></label>
-                <input type="text" id="tt">
+                <input type="text" id="tt6">
 
                 <button type="button" class="btnthemvl">Thêm</button>
             </div>
@@ -735,23 +718,23 @@ opacity: 1;
 
 <!----------------------------------------Form sửa VL------------------------------------------>
 <div id="id12" class="modall">
-<form method="POST" id="formJoin" class="modall-contentt animatee">
+<form method="POST" id="formsuavl" class="modall-contentt animatee">
 
     <div class="containerr">
             <label><b>Mã VL</b></label>
-            <input type="text" id="mavl">
+            <input type="text" id="mavl5">
 
             <label><b>Tên VL</b></label>
-            <input type="text" id="tenvl">
+            <input type="text" id="tenvl5">
 
             <label><b>Mã CT</b></label>
-            <input type="text" id="mact">
+            <input type="text" id="mact5">
 
             <label><b>Mã NN</b></label>
-            <input type="text" id="mann">
+            <input type="text" id="mann5">
 
             <label><b>Trạng Thái</b></label>
-            <input type="text" id="tt">
+            <input type="text" id="tt5">
 
         <button type="button" class="btnsuavl">Sửa</button>
     </div>
@@ -801,11 +784,9 @@ opacity: 1;
 <!----------------------------------------Form thêm TT------------------------------------------>
     <div id="id13" class="modall">
 
-        <form method="POST" id="formJoin" class="modall-contentt animatee">
+        <form method="POST" id="formthemthongtin" class="modall-contentt animatee">
 
             <div class="containerr">
-                <label><b>Mã TT</b></label>
-                <input type="text" id="matt">
 
                 <label><b>Logo</b></label>
                 <input type="text" id="logo">
@@ -820,7 +801,7 @@ opacity: 1;
                 <input type="text" id="ngaydang">
 
                 <label><b>Mã VL</b></label>
-                <input type="text" id="mavl">
+                <input type="text" id="mavl3">
 
                 <button type="button" class="btnthemtt">Thêm</button>
             </div>
@@ -833,26 +814,26 @@ opacity: 1;
 
 <!----------------------------------------Form sửa TT------------------------------------------>
 <div id="id14" class="modall">
-<form method="POST" id="formJoin" class="modall-contentt animatee">
+<form method="POST" id="formsuatt" class="modall-contentt animatee">
 
     <div class="containerr">
             <label><b>Mã TT</b></label>
-            <input type="text" id="matt">
+            <input type="text" id="matt1">
 
             <label><b>Logo</b></label>
-            <input type="text" id="logo">
+            <input type="text" id="logo1">
 
             <label><b>Số Lượng Tuyển</b></label>
-            <input type="text" id="slt">
+            <input type="text" id="slt1">
 
             <label><b>Lương</b></label>
-            <input type="text" id="l">
+            <input type="text" id="l1">
 
             <label><b>Ngày Đăng </b></label>
-            <input type="text" id="ngaydang">
+            <input type="text" id="ngaydang1">
 
             <label><b>Mã VL</b></label>
-            <input type="text" id="mavl">
+            <input type="text" id="mavl1">
 
         <button type="button" class="btnsuatt">Sửa</button>
     </div>
@@ -913,6 +894,9 @@ for (i = 0; i < dropdown.length; i++) {
             }
         }
 </script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/join.js"></script>
 
 </body>
 </html>
